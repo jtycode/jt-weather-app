@@ -1,0 +1,48 @@
+#search-city {
+  display: block;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  font-family: "Urbanist", sans-serif;
+  font-size: 50px;
+  padding-top: 40px;
+}
+h2,
+h3 {
+  text-align: right;
+  font-family: "Urbanist", sans-serif;
+}
+h3 {
+  font-size: 15px;
+}
+#currentTempPic {
+  text-align: center;
+}
+.currentTemp {
+  text-align: center;
+}
+#temp {
+  font-family: "Urbanist", sans-serif;
+  font-size: 50px;
+}
+#unit {
+  font-size: 20px;
+}
+.currentDetails {
+  text-align: right;
+}
+.days,
+.high {
+  font-weight: 600;
+}
+.days,
+.daysGraphic,
+.high,
+.low {
+  text-align: center;
+}
+.switch {
+  text-align: center;
+  font-size: 12px;
+}
