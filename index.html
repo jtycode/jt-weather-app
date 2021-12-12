@@ -4,7 +4,108 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather App</title>
   </head>
-  <body></body>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="src/styles.css" />
+  <script src="src/script.js"></script>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <form id="search-city">
+            <input
+              class="rounded-pill"
+              id="search-text-input"
+              type="text"
+              placeholder="city name"
+            />
+            <input class="rounded-pill" type="submit" value="search" />
+          </form>
+          <h1 id="city">Hello, city!</h1>
+          <br />
+          <div class="row">
+            <div class="col-6">
+              <div class="currentTemp">
+                <img src="images/sunny.png" alt="" width="200" />
+              </div>
+              <div class="currentTemp">
+                <span id="temp">66</span>
+                <span id="unit">
+                  <a href="#" id="fahrenheit-link"> °F </a>
+                  |
+                  <a href="#" id="celcius-link"> °C </a>
+                </span>
+              </div>
+            </div>
+            <div class="col-6">
+              <h2 id="currentDate">Sun. Oct 19</h2>
+              <h3 id="currentTime">
+                <em> last updated 18:45 </em>
+              </h3>
+              <br />
+              <br />
+              <br />
+              <br />
+              <div class="details">feels like 60°F</div>
+              <div class="details">wind: 1mph</div>
+              <div class="details">precipitation: 0%</div>
+            </div>
+          </div>
+          <br />
+          <div class="row days">
+            <div class="col-2">Mon</div>
+            <div class="col-2">Tues</div>
+            <div class="col-2">Wed</div>
+            <div class="col-2">Thu</div>
+            <div class="col-2">Fri</div>
+          </div>
+          <div class="row daysGraphic">
+            <div class="col-2">
+              <img src="images/partly cloudy.png" alt="" width="50" />
+            </div>
+            <div class="col-2">
+              <img src="images/partly cloudy.png" alt="" width="50" />
+            </div>
+            <div class="col-2">
+              <img src="images/sun and rain.png" alt="" width="50" />
+            </div>
+            <div class="col-2">
+              <img src="images/rainy.png" alt="" width="50" />
+            </div>
+            <div class="col-2">
+              <img src="images/stormy.png" alt="" width="50" />
+            </div>
+          </div>
+          <div class="row high">
+            <div class="col-2">67°</div>
+            <div class="col-2">65°</div>
+            <div class="col-2">60°</div>
+            <div class="col-2">55°</div>
+            <div class="col-2">53°</div>
+          </div>
+          <div class="row low">
+            <div class="col-2">60°</div>
+            <div class="col-2">60°</div>
+            <div class="col-2">55°</div>
+            <div class="col-2">52°</div>
+            <div class="col-2">50°</div>
+          </div>
+          <br />
+          <div class="switch">Switch to Celcius</div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
