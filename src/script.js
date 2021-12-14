@@ -1,3 +1,5 @@
+// Current Details display
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = `Hello, ${response.data.name}!`;
   document.querySelector("#temp").innerHTML = Math.round(
@@ -19,6 +21,8 @@ function displayWeatherCondition(response) {
     response.data.wind.speed
   );
 }
+
+// Search city engine
 function searchCity(city) {
   let units = "imperial";
   let apiKey = "84f4278481c3a4f1198c0854406849af";
@@ -32,6 +36,7 @@ function handleSearchCity(event) {
   searchCity(city);
 }
 
+// User current location (geolocation)
 function searchGeolocation(position) {
   let apiKey = "84f4278481c3a4f1198c0854406849af";
   let lat = position.coords.latitude;
@@ -52,6 +57,8 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", searchCurrentLocation);
 
 searchCity("Tokyo");
+
+// Time and Date
 
 function formatTime(time) {
   let hours = time.getHours();
@@ -95,6 +102,8 @@ function formatDate(date) {
 let dateElement = document.querySelector("#currentDate");
 let currentDate = new Date();
 dateElement.innerHTML = formatDate(currentDate);
+
+// Celsius vs Fahrenheit conversion
 
 function convertToCelcius(event) {
   event.preventDefault();
