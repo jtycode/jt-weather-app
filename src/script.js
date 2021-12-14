@@ -1,5 +1,4 @@
 // Current Details display
-
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = `Hello, ${response.data.name}!`;
   document.querySelector("#temp").innerHTML = Math.round(
@@ -24,7 +23,7 @@ function displayWeatherCondition(response) {
 
 // Search city engine
 function searchCity(city) {
-  let units = "imperial";
+  let units = "metric";
   let apiKey = "84f4278481c3a4f1198c0854406849af";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayWeatherCondition);
@@ -38,10 +37,12 @@ function handleSearchCity(event) {
 
 // User current location (geolocation)
 function searchGeolocation(position) {
-  let apiKey = "84f4278481c3a4f1198c0854406849af";
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=imperial`;
+  let units = "metric";
+  let apiKey = "84f4278481c3a4f1198c0854406849af";
+  let apiEndpoint = "https://api.openweather.map.org/data/2.5/weather";
+  let apiUrl = `${apiEndpoint}?lat=${lat}&lon=${long}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
@@ -59,7 +60,6 @@ currentLocationButton.addEventListener("click", searchCurrentLocation);
 searchCity("Tokyo");
 
 // Time and Date
-
 function formatTime(time) {
   let hours = time.getHours();
   if (hours < 10) {
@@ -104,7 +104,6 @@ let currentDate = new Date();
 dateElement.innerHTML = formatDate(currentDate);
 
 // Celsius vs Fahrenheit conversion
-
 function convertToCelcius(event) {
   event.preventDefault();
   let tempElement = document.querySelector("#temp");
