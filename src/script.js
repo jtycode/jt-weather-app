@@ -3,6 +3,8 @@ function displayWeatherCondition(response) {
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
   document.querySelector("#realFeel").innerHTML = Math.round(
     response.data.main.feels_like
   );
@@ -13,8 +15,9 @@ function displayWeatherCondition(response) {
     response.data.main.temp_min
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
 }
 function searchCity(city) {
   let units = "imperial";
