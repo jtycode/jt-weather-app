@@ -1,11 +1,12 @@
 .card {
   max-width: 600px;
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 #search-city {
   display: block;
   text-align: center;
+  margin-top: 20px;
 }
 h1 {
   text-align: center;
@@ -13,12 +14,8 @@ h1 {
   font-size: 50px;
   padding-top: 40px;
 }
-.weatherInfo {
-  text-align: right;
-  font-family: "Urbanist", sans-serif;
-}
-h3 {
-  font-size: 15px;
+.weatherGraphic {
+  padding: 0px 0px 0px 30px;
 }
 #currentTempPic {
   text-align: center;
@@ -32,6 +29,16 @@ h3 {
 }
 #unit {
   font-size: 20px;
+  position: relative;
+  top: -24px;
+}
+h3 {
+  font-size: 15px;
+}
+.weatherInfo {
+  text-align: right;
+  font-family: "Urbanist", sans-serif;
+  padding: 0px 50px 0px 0px;
 }
 .days,
 .high {
