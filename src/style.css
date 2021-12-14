@@ -1,3 +1,8 @@
+.card {
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+}
 #search-city {
   display: block;
   text-align: center;
@@ -8,8 +13,7 @@ h1 {
   font-size: 50px;
   padding-top: 40px;
 }
-h2,
-h3 {
+.weatherInfo {
   text-align: right;
   font-family: "Urbanist", sans-serif;
 }
@@ -29,9 +33,6 @@ h3 {
 #unit {
   font-size: 20px;
 }
-.currentDetails {
-  text-align: right;
-}
 .days,
 .high {
   font-weight: 600;
@@ -44,5 +45,11 @@ h3 {
 }
 .switch {
   text-align: center;
+  font-size: 12px;
+}
+footer {
+  padding: 10px;
+  text-align: center;
+  font-family: "Urbanist", sans-serif;
   font-size: 12px;
 }
