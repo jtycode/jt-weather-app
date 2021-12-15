@@ -26,7 +26,7 @@ h2 {
 .weatherGraphic {
   padding: 0px 0px 0px 30px;
 }
-#currentTempPic {
+#currentForecastIcon {
   display: block;
   margin: 0 auto;
 }
