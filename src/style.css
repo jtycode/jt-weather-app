@@ -42,16 +42,11 @@ h3 {
 }
 .forecast {
   padding-top: 20px;
-}
-.days,
-.high {
-  font-weight: 600;
-}
-.days,
-.daysGraphic,
-.high,
-.low {
   text-align: center;
+}
+.forecastDay,
+.forecastHigh {
+  font-weight: 600;
 }
 .switch {
   text-align: center;
