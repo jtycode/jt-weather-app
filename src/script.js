@@ -1,7 +1,7 @@
 // Current details display
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = `Hello, ${response.data.name}!`;
-  document.querySelector("#temp").innerHTML = Math.round(
+  document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector("#description").innerHTML =
@@ -19,6 +19,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  fahrenheitTemperature = response.data.main.temp;
 
   // Current forecast icon
   document.querySelector(
@@ -116,22 +117,21 @@ let currentDate = new Date();
 dateElement.innerHTML = formatDate(currentDate);
 
 // Celsius vs Fahrenheit conversion
-function convertToCelcius(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temp");
-  let temp = tempElement.innerHTML;
-  temp = Number(temp);
-  tempElement.innerHTML = Math.round(((temp - 32) * 5) / 9);
-}
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", convertToCelcius);
-
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("#temp");
-  let temp = tempElement.innerHTML;
-  temp = Number(temp);
-  tempElement.innerHTML = Math.round((temp * 9) / 5 + 32);
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+let fahrenheitTemperature = null;
+
+function convertToCelcius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let celciusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", convertToCelcius);
