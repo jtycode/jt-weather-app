@@ -70,7 +70,7 @@ function formatTime(time) {
     minutes = `0${minutes}`;
   }
 
-  return `last updated: ${hours}:${minutes}`;
+  return `Last updated: ${hours}:${minutes}`;
 }
 let timeElement = document.querySelector("#currentTime");
 let currentTime = new Date();
