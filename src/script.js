@@ -1,4 +1,4 @@
-// Current Details display
+// Current details display
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = `Hello, ${response.data.name}!`;
   document.querySelector("#temp").innerHTML = Math.round(
