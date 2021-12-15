@@ -1,3 +1,6 @@
+body {
+  font-family: "Urbanist", sans-serif;
+}
 .card {
   max-width: 600px;
   display: block;
@@ -10,7 +13,6 @@
 }
 h1 {
   text-align: center;
-  font-family: "Urbanist", sans-serif;
   font-size: 50px;
   padding-top: 40px;
 }
@@ -24,7 +26,6 @@ h1 {
   text-align: center;
 }
 #temp {
-  font-family: "Urbanist", sans-serif;
   font-size: 50px;
 }
 #unit {
@@ -37,8 +38,10 @@ h3 {
 }
 .weatherInfo {
   text-align: right;
-  font-family: "Urbanist", sans-serif;
   padding: 0px 50px 0px 0px;
+}
+.forecast {
+  padding-top: 20px;
 }
 .days,
 .high {
@@ -57,6 +60,5 @@ h3 {
 footer {
   padding: 10px;
   text-align: center;
-  font-family: "Urbanist", sans-serif;
   font-size: 12px;
 }
