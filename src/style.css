@@ -15,26 +15,33 @@ body {
 }
 h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 55px;
   padding-top: 30px;
   margin: 0 auto;
+  font-weight: 600;
+}
+h2 {
+  font-size: 25px;
 }
 .weatherGraphic {
   padding: 0px 0px 0px 30px;
 }
 #currentTempPic {
-  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 .currentTemp {
   text-align: center;
+  margin: 10px auto;
 }
 #temp {
-  font-size: 50px;
+  font-size: 55px;
+  font-weight: 600;
 }
 #unit {
   font-size: 20px;
   position: relative;
-  top: -20px;
+  top: -24px;
 }
 h3 {
   font-size: 15px;
@@ -44,12 +51,19 @@ h3 {
   padding: 0px 30px 0px 0px;
 }
 .forecast {
-  padding-top: 20px;
+  padding-top: 10px;
   text-align: center;
+}
+.forecastDay {
+  margin-bottom: 10px;
 }
 .forecastDay,
 .forecastHigh {
-  font-weight: 600;
+  font-weight: 700;
+}
+.forecastHigh,
+.forecastLow {
+  margin: 10px auto;
 }
 .switch {
   text-align: center;
