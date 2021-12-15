@@ -135,3 +135,36 @@ function convertToCelcius(event) {
 }
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", convertToCelcius);
+
+// Week Forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
+  let forecastHTML = `<div class="row justify-content-md-center">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col col-md-2">
+          <p class="forecastDay">
+                ${day}
+              <div>
+                <img 
+                  src="images/partly cloudy.png" 
+                  alt="" 
+                  id ="forecastIcon" 
+                  width="50" />
+              </div>
+              <div class="forecastHigh"> 67° </div>
+              <div class="forecastLow"> 60° </div>
+          <p>
+     </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
