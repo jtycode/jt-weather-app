@@ -19,6 +19,17 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+
+  // Current forecast icon
+  document.querySelector(
+    "#currentForecastIcon"
+  ).src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 // Search city engine
