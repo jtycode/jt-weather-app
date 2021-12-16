@@ -7,6 +7,8 @@ body {
   margin: 20px auto;
   margin-bottom: 0;
   border-radius: 10px;
+  background-color: #f9f7fd;
+  box-shadow: 14px 14px 0px -2px#c3bef0;
 }
 #search-city {
   display: block;
@@ -19,6 +21,7 @@ h1 {
   padding-top: 30px;
   margin: 0 auto;
   font-weight: 600;
+  text-shadow: 1px 2px pink;
 }
 h2 {
   font-size: 25px;
@@ -47,7 +50,7 @@ h3 {
   font-size: 15px;
 }
 .weatherInfo {
-  text-align: right;
+  text-align: center;
   padding: 0px 30px 0px 0px;
 }
 .forecast {
@@ -65,12 +68,14 @@ h3 {
 .forecastLow {
   margin: 10px auto;
 }
+.forecastHigh {
+}
 .switch {
   text-align: center;
   font-size: 12px;
 }
 footer {
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   font-size: 12px;
 }
