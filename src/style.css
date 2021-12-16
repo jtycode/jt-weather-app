@@ -7,8 +7,8 @@ body {
   margin: 20px auto;
   margin-bottom: 0;
   border-radius: 10px;
-  background-color: #f9f7fd;
-  box-shadow: 14px 14px 0px -2px#c3bef0;
+  background-color: #fff1e6;
+  box-shadow: 14px 14px 0px -2px #e5b3ac;
 }
 #search-city {
   display: block;
@@ -21,7 +21,9 @@ h1 {
   padding-top: 30px;
   margin: 0 auto;
   font-weight: 600;
-  text-shadow: 1px 2px pink;
+  text-shadow: 4px 4px #e5b3ac;
+  color: white;
+  -webkit-text-stroke: 0.8px #e5b3ac;
 }
 h2 {
   font-size: 25px;
