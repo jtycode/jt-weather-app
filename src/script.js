@@ -21,15 +21,15 @@ function displayWeatherCondition(response) {
   );
   fahrenheitTemperature = response.data.main.temp;
   // Current forecast icon
-  document.querySelector(
-    "#currentForecastIcon"
-  ).src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
-
+  let iconElement = document.querySelector("#currentForecastIcon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  iconElement.setAttribute(
+    "alt",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+  );
   // forecast
   getForecast(response.data.coord);
 }
