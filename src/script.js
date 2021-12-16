@@ -33,32 +33,47 @@ function displayWeatherCondition(response) {
   // forecast
   getForecast(response.data.coord);
 }
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
 // Week Forecast
 function displayForecast(response) {
-  let forecastElement = document.querySelector("#weather-forecast");
+  let forecast = response.data.daily;
 
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row justify-content-md-center">`;
 
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col col-md-2">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col col-md-2">
           <p class="forecastDay">
-                ${day}
+                ${formatDay(forecastDay.dt)}
               <div>
                 <img 
-                  src="images/partly cloudy.png" 
+                  src="https://openweathermap.org/img/wn/${
+                    forecastDay.weather[0].icon
+                  }@2x.png" 
                   alt="" 
                   id ="forecastIcon" 
                   width="50" />
               </div>
-              <div class="forecastHigh"> 67° </div>
-              <div class="forecastLow"> 60° </div>
+              <div class="forecastHigh"> ${Math.round(
+                forecastDay.temp.max
+              )}° </div>
+              <div class="forecastLow"> ${Math.round(
+                forecastDay.temp.min
+              )}° </div>
           <p>
      </div>
   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -71,8 +86,6 @@ function getForecast(coordinates) {
   let apiUrl = `${apiEndpoint}/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
 }
-
-displayForecast();
 
 // Search city engine
 function searchCity(city) {
@@ -110,8 +123,6 @@ form.addEventListener("submit", handleSearchCity);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", searchCurrentLocation);
-
-searchCity("Tokyo");
 
 // Time and Date
 function formatTime(time) {
@@ -175,3 +186,7 @@ function convertToCelcius(event) {
 }
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", convertToCelcius);
+
+searchCity("Tokyo");
+
+displayForecast();
