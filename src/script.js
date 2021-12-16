@@ -80,7 +80,6 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "84f4278481c3a4f1198c0854406849af";
   let apiEndpoint = `https://api.openweathermap.org/data/2.5`;
   let apiUrl = `${apiEndpoint}/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
@@ -188,5 +187,3 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", convertToCelcius);
 
 searchCity("Tokyo");
-
-displayForecast();
