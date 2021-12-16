@@ -24,12 +24,9 @@ function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#currentForecastIcon");
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `images/${response.data.weather[0].icon}.png`
   );
-  iconElement.setAttribute(
-    "alt",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
-  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
   // forecast
   getForecast(response.data.coord);
 }
@@ -57,9 +54,7 @@ function displayForecast(response) {
                 ${formatDay(forecastDay.dt)}
               <div>
                 <img 
-                  src="https://openweathermap.org/img/wn/${
-                    forecastDay.weather[0].icon
-                  }@2x.png" 
+                  src="images/${forecastDay.weather[0].icon}.png" 
                   alt="" 
                   id ="forecastIcon" 
                   width="50" />
