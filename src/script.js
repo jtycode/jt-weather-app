@@ -20,7 +20,6 @@ function displayWeatherCondition(response) {
     response.data.wind.speed
   );
   fahrenheitTemperature = response.data.main.temp;
-
   // Current forecast icon
   document.querySelector(
     "#currentForecastIcon"
@@ -31,7 +30,49 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  // forecast
+  getForecast(response.data.coord);
 }
+// Week Forecast
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
+  let forecastHTML = `<div class="row justify-content-md-center">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col col-md-2">
+          <p class="forecastDay">
+                ${day}
+              <div>
+                <img 
+                  src="images/partly cloudy.png" 
+                  alt="" 
+                  id ="forecastIcon" 
+                  width="50" />
+              </div>
+              <div class="forecastHigh"> 67° </div>
+              <div class="forecastLow"> 60° </div>
+          <p>
+     </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "84f4278481c3a4f1198c0854406849af";
+  let apiEndpoint = `https://api.openweathermap.org/data/2.5`;
+  let apiUrl = `${apiEndpoint}/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+displayForecast();
 
 // Search city engine
 function searchCity(city) {
@@ -82,7 +123,6 @@ function formatTime(time) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-
   return `Last updated: ${hours}:${minutes}`;
 }
 let timeElement = document.querySelector("#currentTime");
@@ -135,36 +175,3 @@ function convertToCelcius(event) {
 }
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", convertToCelcius);
-
-// Week Forecast
-function displayForecast() {
-  let forecastElement = document.querySelector("#weather-forecast");
-
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
-
-  let forecastHTML = `<div class="row justify-content-md-center">`;
-
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col col-md-2">
-          <p class="forecastDay">
-                ${day}
-              <div>
-                <img 
-                  src="images/partly cloudy.png" 
-                  alt="" 
-                  id ="forecastIcon" 
-                  width="50" />
-              </div>
-              <div class="forecastHigh"> 67° </div>
-              <div class="forecastLow"> 60° </div>
-          <p>
-     </div>
-  `;
-  });
-
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-}
-displayForecast();
