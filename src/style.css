@@ -39,6 +39,15 @@ h1 {
   margin: 0 auto;
   margin-top: 10px;
 }
+.weatherGraphic .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+.weatherGraphic #fahrenheit-link,
+.weatherGraphic #celcius-link {
+  text-decoration: none;
+}
 #temperature {
   font-size: 70px;
   font-weight: 700;
