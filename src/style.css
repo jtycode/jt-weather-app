@@ -85,9 +85,9 @@ footer {
   text-align: center;
   font-size: 12px;
 }
-a {
+.footerLinks {
   text-decoration: none;
 }
-a:hover {
+.footerLinks:hover {
   cursor: pointer;
 }
