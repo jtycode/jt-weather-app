@@ -7,8 +7,8 @@ body {
   margin: 20px auto;
   margin-bottom: 0;
   border-radius: 10px;
-  background-color: #fff1e6;
-  box-shadow: 14px 14px 0px -2px #e5b3ac;
+  background-color: #fce8ed;
+  box-shadow: 14px 14px 0px -2px #f1aac2;
 }
 #search-city {
   display: block;
@@ -21,12 +21,13 @@ h1 {
   padding-top: 30px;
   margin: 0 auto;
   font-weight: 600;
-  text-shadow: 4px 4px #e5b3ac;
+  text-shadow: 4px 4px #ea85a2;
   color: white;
-  -webkit-text-stroke: 0.8px #e5b3ac;
+  -webkit-text-stroke: 0.8px #ea85a2;
 }
 h2 {
   font-size: 25px;
+  text-shadow: 2px 2px white;
 }
 .weatherGraphic {
   padding: 0px 0px 0px 30px;
@@ -40,8 +41,10 @@ h2 {
   margin: 10px auto;
 }
 #temperature {
-  font-size: 55px;
-  font-weight: 600;
+  font-size: 70px;
+  font-weight: 700;
+  color: #ea85a2;
+  text-shadow: 2px 2px white;
 }
 #unit {
   font-size: 20px;
@@ -61,16 +64,17 @@ h3 {
 }
 .forecastDay {
   margin-bottom: 10px;
+  font-weight: 700;
+  text-shadow: 2px 2px white;
 }
-.forecastDay,
 .forecastHigh {
   font-weight: 700;
+  color: #ea85a2;
+  text-shadow: 2px 2px white;
 }
 .forecastHigh,
 .forecastLow {
   margin: 10px auto;
-}
-.forecastHigh {
 }
 .switch {
   text-align: center;
