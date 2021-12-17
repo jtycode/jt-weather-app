@@ -6,7 +6,7 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-  document.querySelector("#realFeel").innerHTML = Math.round(
+  document.querySelector("#feelsLike").innerHTML = Math.round(
     response.data.main.feels_like
   );
   document.querySelector("#currentHigh").innerHTML = Math.round(
