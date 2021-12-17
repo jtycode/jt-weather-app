@@ -63,13 +63,13 @@ h3 {
   font-weight: 200;
 }
 h4 {
-  color: white;
+  color: #ffffff;
   font-size: 30px;
   font-weight: 700;
-  text-shadow: 3px 3px #d1d1d1;
+  text-shadow: 3px 3px #bdc2d5;
   letter-spacing: 4px;
   margin: 30px auto;
-  -webkit-text-stroke: 0.3px #d1d1d1;
+  -webkit-text-stroke: 0.3px #bdc2d5;
 }
 .currentInfo {
   margin: 10px auto;
