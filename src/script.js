@@ -46,7 +46,7 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row justify-content-md-center">`;
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index > 0 && index < 6) {
       forecastHTML =
         forecastHTML +
         `<div class="col col-md-2">
