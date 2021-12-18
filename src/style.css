@@ -29,6 +29,7 @@ h1 {
   text-shadow: 4px 4px #ea85a2;
   color: white;
   -webkit-text-stroke: 0.8px #ea85a2;
+  letter-spacing: 2px;
 }
 .weatherGraphic {
   padding: 0px 0px 0px 30px;
@@ -48,17 +49,23 @@ h1 {
 .weatherGraphic #celcius-link {
   text-decoration: none;
 }
+.currentTemp {
+  padding-top: 4px;
+}
 #temperature {
   font-size: 70px;
   font-weight: 700;
   color: #ea85a2;
   text-shadow: 2px 2px white;
-  text-align: center;
+  text-align: right;
+  padding-right: 0;
 }
 #unit {
   font-size: 20px;
   position: relative;
-  top: -34px;
+  top: 19px;
+  padding-left: 5px;
+  text-align: left;
 }
 .currentFeel {
   font-weight: 300;
