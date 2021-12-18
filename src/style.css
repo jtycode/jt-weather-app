@@ -20,6 +20,11 @@ body {
   background-color: #ea85a2;
   color: #ffffff;
 }
+#search-button:hover,
+#current-location-button:hover {
+  background-color: #efefef;
+  color: #ea85a2;
+}
 h1 {
   text-align: center;
   font-size: 55px;
