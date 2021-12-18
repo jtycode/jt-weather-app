@@ -62,6 +62,7 @@ h1 {
 }
 #temperatureUnit {
   font-size: 20px;
+  font-weight: 500;
   position: relative;
   top: 19px;
   padding-left: 5px;
