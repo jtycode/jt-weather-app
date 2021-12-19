@@ -69,8 +69,6 @@ function displayForecast(response) {
      </div>
   `;
     }
-    highTemperature = forecastDay.temp.max;
-    lowTemperature = forecastDay.temp.min;
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -168,13 +166,6 @@ function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-
-  // Convert forecast temperatures
-  let highTempElement = document.querySelector("forecastHigh");
-  let lowTempElement = document.quertSelector("forecastLow");
-  highTempElement.innerHTML = Math.round(highTemperature);
-  lowTempElement.innerHTML = Math.round(lowTemperature);
-
   // Remove the active class from the celcius link
   fahrenheitLink.classList.add("active");
   celciusLink.classList.remove("active");
@@ -190,22 +181,11 @@ function convertToCelcius(event) {
   let celciusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 
-  // Convert forecast temperatures
-  let highTempElement = document.querySelectorAll("forecastHigh");
-  let lowTempElement = document.quertSelectorAll("forecastLow");
-  let cHighTemperature = ((highTemperature - 32) * 5) / 9;
-  highTempElement.innerHTML = Math.round(cHighTemperature);
-  let cLowTemperature = ((lowTemperature - 32) * 5) / 9;
-  lowTemperatureElement.innerHTML = Math.round(cLowTemperature);
-
   // Remove the active class from the fahrenheit link
   fahrenheitLink.classList.remove("active");
   celciusLink.classList.add("active");
 }
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", convertToCelcius);
-
-let highTemperature = null;
-let lowTempearture = null;
 
 searchCity("Tokyo");
