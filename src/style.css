@@ -45,13 +45,12 @@ h1 {
   margin: 0 auto;
   margin-top: 10px;
 }
-.weatherGraphic .active {
+.active {
   color: black;
   cursor: default;
-  text-decoration: none;
 }
-.weatherGraphic #fahrenheit-link,
-.weatherGraphic #celcius-link {
+#fahrenheit-link,
+#celcius-link {
   text-decoration: none;
 }
 .currentTemp {
