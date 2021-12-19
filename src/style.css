@@ -45,14 +45,6 @@ h1 {
   margin: 0 auto;
   margin-top: 10px;
 }
-.active {
-  color: black;
-  cursor: default;
-}
-#fahrenheit-link,
-#celcius-link {
-  text-decoration: none;
-}
 .currentTemp {
   padding-top: 4px;
 }
@@ -71,6 +63,14 @@ h1 {
   top: 19px;
   padding-left: 5px;
   text-align: left;
+}
+.active {
+  color: black;
+  cursor: default;
+}
+#fahrenheit-link,
+#celcius-link {
+  text-decoration: none;
 }
 .currentFeel {
   font-weight: 300;
@@ -126,14 +126,13 @@ h4 {
 .forecastHigh {
   font-weight: 700;
   color: #ea85a2;
-}
-.forecastHigh,
-.forecastLow {
   margin: 10px auto;
   text-shadow: 2px 2px white;
 }
 .forecastLow {
   font-weight: 500;
+  margin: 10px auto;
+  text-shadow: 2px 2px white;
 }
 footer {
   padding: 20px;
