@@ -191,8 +191,8 @@ function convertToCelcius(event) {
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 
   // Convert forecast temperatures
-  let highTempElement = document.querySelector("forecastHigh");
-  let lowTempElement = document.quertSelector("forecastLow");
+  let highTempElement = document.querySelectorAll("forecastHigh");
+  let lowTempElement = document.quertSelectorAll("forecastLow");
   let cHighTemperature = ((highTemperature - 32) * 5) / 9;
   highTempElement.innerHTML = Math.round(cHighTemperature);
   let cLowTemperature = ((lowTemperature - 32) * 5) / 9;
